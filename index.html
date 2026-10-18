@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bilibilidl - 内测下载站</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
+body{
+    background:#fff8fa;
+    color:#222;
+    line-height:1.65;
+    padding:24px 16px;
+}
+.container{
+    max-width:640px;
+    margin:0 auto;
+}
+header{
+    text-align:center;
+    margin-bottom:22px;
+}
+h1{
+    color:#d84b86;
+    font-size:32px;
+    margin-bottom:6px;
+}
+.subtitle{
+    color:#777;
+    font-size:16px;
+}
+
+.app-info-card{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    background:#ffffff;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 2px 12px rgba(216,75,134,0.12);
+    margin-bottom:22px;
+}
+.app-icon{
+    width:76px;
+    height:76px;
+    border-radius:16px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+.app-meta h2{
+    font-size:24px;
+    color:#222;
+    margin-bottom:5px;
+}
+.app-version{
+    font-size:15px;
+    color:#d84b86;
+    font-weight:600;
+    margin-bottom:3px;
+}
+.app-size{
+    font-size:14px;
+    color:#888;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:14px;
+    padding:26px;
+    box-shadow:0 2px 12px rgba(216,75,134,0.12);
+    margin-bottom:22px;
+}
+.tag{
+    display:inline-block;
+    background:#fce4ec;
+    color:#c23b72;
+    font-size:13px;
+    padding:3px 10px;
+    border-radius:999px;
+    margin-bottom:14px;
+}
+.download-row{
+    display:flex;
+    gap:12px;
+    margin-top:8px;
+    margin-bottom:20px;
+}
+.download-btn{
+    flex:1;
+    display:block;
+    text-align:center;
+    background:#d84b86;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    padding:14px;
+    border-radius:10px;
+    transition: background 0.22s;
+}
+.download-btn:hover{
+    background:#c03c74;
+}
+.download-btn.mirror{
+    background:#5988d8;
+}
+.download-btn.mirror:hover{
+    background:#4772bc;
+}
+.tip-small{
+    font-size:13px;
+    color:#888;
+    text-align:center;
+    margin:-10px 0 12px;
+}
+
+.slide-wrap{
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+}
+.slide-row{
+    display:flex;
+    gap:14px;
+}
+.slide-item{
+    flex:0 0 85%;
+    scroll-snap-align:center;
+}
+.slide-item img{
+    width:100%;
+    border-radius:12px;
+    display:block;
+}
+
+.note{
+    background:#fff0f4;
+    border-left:4px solid #d84b86;
+    padding:14px 16px;
+    border-radius:0 8px 8px 0;
+    font-size:15px;
+    margin:22px 0;
+}
+ul{
+    padding-left:22px;
+    margin:12px 0;
+}
+.footer{
+    text-align:center;
+    margin-top:48px;
+    font-size:14px;
+    color:#999;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+    <h1>bilibilidl</h1>
+    <p class="subtitle">B站视频下载工具 · 内测版本</p>
+</header>
+
+<div class="app-info-card">
+    <img class="app-icon" src="bilibili图标.png" alt="bilibilidl图标">
+    <div class="app-meta">
+        <h2>bilibilidl</h2>
+        <p class="app-version">版本 v0.3</p>
+        <p class="app-size">APK大小：42.8 MB</p>
+    </div>
+</div>
+
+<div class="card">
+    <span class="tag">内测 v0.3 debug｜arm64‑v8a</span>
+    <p>仅支持 Android7.0 (API24) 以上64位安卓手机</p>
+
+    <div class="download-row">
+        <a class="download-btn" target="_blank" href="https://github.com/sxsbsxs/bilibilidl/releases/download/v0.3/bilibilidl-2.5.3-arm64-v8a-debug.apk">官方源下载</a>
+        <a class="download-btn mirror" target="_blank" href="https://ghproxy.net/https://github.com/sxsbsxs/bilibilidl/releases/download/v0.3/bilibilidl-2.5.3-arm64-v8a-debug.apk">国内加速下载</a>
+    </div>
+    <p class="tip-small">⚠️加速链接为GitHub国内镜像代理；如一个慢就换另一个</p>
+
+    <div class="slide-wrap">
+        <div class="slide-row">
+            <div class="slide-item">
+                <img src="s1_home.jpg" alt="主页">
+            </div>
+            <div class="slide-item">
+                <img src="s2_parse.jpg" alt="解析页面">
+            </div>
+            <div class="slide-item">
+                <img src="s3_downloadopt.jpg" alt="下载选项">
+            </div>
+            <div class="slide-item">
+                <img src="s4_progress.jpg" alt="下载进度">
+            </div>
+            <div class="slide-item">
+                <img src="s5_history.jpg" alt="下载记录">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="note">
+<strong>重要说明</strong>
+<ul>
+<li>登录请务必使用官方B站App扫码，极速版、概念版扫码会失效；</li>
+<li>支持 BV / AV / B站链接 / b23.tv短链一键解析；</li>
+<li>除视频外还支持下载封面图片、弹幕XML、字幕SRT；</li>
+<li>登录账号解锁1080P清晰度</strong>；</li>
+<li>下载后可一键导出视频到手机 Download/bilibilidl；</li>
+</ul>
+</div>
+
+<div class="card">
+    <h3>更新日志 v0.3</h3>
+    <ul>
+        <li>✅ B站扫码登录、登出，本地持久保存Cookie账号信息</li>
+        <li>✅ 完整视频解析，支持BV、AV、b23.tv短链接</li>
+        <li>✅ 多种清晰度选择，音视频自动合并输出MP4</li>
+        <li>✅ 独立下载封面、弹幕XML、字幕SRT文件</li>
+        <li>✅ 下载进度实时显示，已下载记录支持一键导出</li>
+        <li>✅ 修复中文、日文特殊字符乱码，Android状态栏导航栏适配</li>
+        <li>后续计划：批量多P弹幕字幕下载、UI细节优化</li>
+    </ul>
+</div>
+
+<div class="footer">
+bilibilidl｜项目仓库 GitHub@sxsbsxs/bilibilidl
+</div>
+</div>
+</body>
+</html>
